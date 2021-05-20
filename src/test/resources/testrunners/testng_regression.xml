@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BOA Test Suite">
+	<listeners>
+		<listener class-name="testlisteners.TestAllureListener" />
+		<listener class-name="testlisteners.ExtentReportListener" />
+		<listener class-name="testlisteners.TesultsListener" />
+	</listeners>
+	<test name="Login page Test">
+		<classes>
+			<class name="tests.LoginPageTest" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
