@@ -17,10 +17,10 @@ public class LoginPage {
     private By email		= By.name("forms.loginForm.email");
     private By password 	= By.name("forms.loginForm.password");
     private By loginButton	= By.xpath("//button[@type='submit']");
-    private By forgotPwdLink= By.cssSelector("span.forgot-password");
+    private By forgotPwd	= By.cssSelector("span.forgot-password");
+    private By createAccount= By.cssSelector("span.create-account");
     private By listbox		=  By.xpath("//div[@role='listbox']/i");
     private By logout		=  By.xpath("//div[@role='option']");
-    private By invalideMail	=  By.xpath("//form[@model='forms.loginForm']/div[3]/div/p");
     
     //Constructor of Page Class
     public LoginPage(WebDriver driver) {
@@ -32,8 +32,17 @@ public class LoginPage {
     public String getLoginPageTitle() {
     	return elementUtil.waitForPageTitle();
     }
+    
+    @Step("Verify Forgot Password Link")
     public boolean isForgotPwdLinkExist() {
-    	Boolean isDisplayed = elementUtil.doIsDisplayed(forgotPwdLink);
+    	Boolean isDisplayed = elementUtil.doIsDisplayed(forgotPwd);
+    	//System.out.println("Is Displayed : " + isDisplayed);
+    	return isDisplayed;
+    }
+    
+    @Step("Verify Create Account Link")
+    public boolean isCreateAccountLinkExist() {
+    	Boolean isDisplayed = elementUtil.doIsDisplayed(createAccount);
     	//System.out.println("Is Displayed : " + isDisplayed);
     	return isDisplayed;
     }
