@@ -36,27 +36,23 @@ public class LoginPage {
     @Step("Verify Forgot Password Link")
     public boolean isForgotPwdLinkExist() {
     	Boolean isDisplayed = elementUtil.doIsDisplayed(forgotPwd);
-    	//System.out.println("Is Displayed : " + isDisplayed);
     	return isDisplayed;
     }
     
     @Step("Verify Create Account Link")
     public boolean isCreateAccountLinkExist() {
     	Boolean isDisplayed = elementUtil.doIsDisplayed(createAccount);
-    	//System.out.println("Is Displayed : " + isDisplayed);
     	return isDisplayed;
     }
     
     @Step("Login with username : {0} and password : {1}")
     public LoginPage doLogin(String un, String pwd) throws InterruptedException {
-    	//System.out.println("Login with : " + un + " " + pwd);
     	LOGGER.info("Login with : " + un + " " + pwd);
     	
     	elementUtil.doSendKeys(email, un);
-    	
     	elementUtil.doSendKeys(password, pwd);
-    	
         elementUtil.doClick(loginButton);
+        
         return new LoginPage(driver);
     }
           

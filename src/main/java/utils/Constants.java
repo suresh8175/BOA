@@ -8,6 +8,8 @@ public class Constants {
 	public static final String LOGIN_PAGE_TITLE = "Login | BOAhub";
 	public static final String HOME_PAGE_URL = "https://uat-portal.boa.co.nz/home";
 	public static final String INVALID_TITLE = "Invalid email or password.";
+	public static final String FORGOT_PAGE_URL = "https://uat-portal.boa.co.nz/forgotPassword";
+	public static final String FORGOT_RESET_PASSWORD_MESSAGE = "Please check your email inbox for a link to complete the reset.";
 	public static final String ACCOUNTS_PAGE_TITLE = "My Account";
 	public static final String ACCOUNTS_PAGE_HEADER = "Your Store";
 	public static final int ACCOUNTS_PAGE_SECTIONS_COUNT = 4;
